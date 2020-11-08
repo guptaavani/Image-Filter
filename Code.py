@@ -6,10 +6,10 @@ im.show() #Showing the original image
 while(True):
     n=int(input(" Enter 1 for black and white filter \n Enter 2 for magic filter \n Enter 3 for colour filter \n Enter 4 to exit \n"))
     if (n==1):
-        img=im.convert('1') #Conver the image into black and white image
+        img=im.convert('L') #Conver the image into black and white image
     if (n==2):
         r, g, b = im.split()
-        img=Image.merge("RGB", (b,r,g)) #Reverse the r,g,b values
+        img=Image.merge("RGB", (b,r,g)) #Change the r,g,b values
     if (n==3):
         colour=input("Enter valid colour \n")
         f=Image.new("RGB", im.size, colour) #Creating a filter of the entered colour
